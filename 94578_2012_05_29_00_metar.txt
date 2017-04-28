@@ -1,0 +1,2 @@
+"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
+"1","YBBN","2012-05-29 00:00",153.1292,-27.3917,68,55.4,64.04,170,10,0,30.27,"M",6.21,"M","FEW","M","M","M","2800.00","M","M","M","M","YBBN 290000Z 17010KT 9999 FEW028 20/13 Q1025"

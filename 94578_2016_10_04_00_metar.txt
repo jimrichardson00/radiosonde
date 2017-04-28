@@ -1,0 +1,2 @@
+"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
+"1","YBBN","2016-10-04 00:00",153.1292,-27.3917,69.8,41,35.09,250,9,0,29.94,"M",6.21,"M","M","M","M","M","M","M","M","M","M","YBBN 040000Z 25009KT CAVOK 21/05 Q1014"

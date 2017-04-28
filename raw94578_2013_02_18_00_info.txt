@@ -1,0 +1,31 @@
+
+                         Station identifier: YBBN
+                             Station number: 94578
+                           Observation time: 130218/0000
+                           Station latitude: -27.38
+                          Station longitude: 153.13
+                          Station elevation: 5.0
+                            Showalter index: 3.49
+                               Lifted index: -1.09
+    LIFT computed using virtual temperature: -1.30
+                                SWEAT index: 180.60
+                                    K index: 30.40
+                         Cross totals index: 19.70
+                      Vertical totals index: 22.30
+                        Totals totals index: 42.00
+      Convective Available Potential Energy: 198.27
+             CAPE using virtual temperature: 252.84
+                      Convective Inhibition: -6.72
+             CINS using virtual temperature: -4.61
+                           Equilibrum Level: 403.08
+ Equilibrum Level using virtual temperature: 401.84
+                   Level of Free Convection: 906.92
+             LFCT using virtual temperature: 912.72
+                     Bulk Richardson Number: 7.71
+          Bulk Richardson Number using CAPV: 9.83
+  Temp [K] of the Lifted Condensation Level: 290.21
+Pres [hPa] of the Lifted Condensation Level: 926.33
+     Mean mixed layer potential temperature: 296.65
+              Mean mixed layer mixing ratio: 13.41
+              1000 hPa to 500 hPa thickness: 5676.00
+Precipitable water [mm] for entire sounding: 45.88

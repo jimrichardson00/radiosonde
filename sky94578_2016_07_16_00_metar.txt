@@ -1,0 +1,2 @@
+"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
+"1","YBBN","2016-07-16 00:00",153.1292,-27.3917,64.4,50,59.5,150,8,0,30.33,"M",6.21,"M","BKN","BKN","M","M",4800,"5700.00","M","M","VCSH","YBBN 160000Z 15008KT 9999 VCSH BKN048 BKN057 18/10 Q1027"

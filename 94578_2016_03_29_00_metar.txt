@@ -1,0 +1,2 @@
+"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
+"1","YBBN","2016-03-29 00:00",153.1292,-27.3917,80.6,64.4,57.84,0,0,0,30.09,"M",6.21,"M","SCT","M","M","M","3000.00","M","M","M","M","YBBN 290000Z 00000KT 9999 SCT030 27/18 Q1019"

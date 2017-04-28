@@ -1,0 +1,8 @@
+#DEBUG: Format Typ    -> comma
+#DEBUG: Time Period   -> 2011-07-05 00:00:00+00:00 2011-07-06 00:00:00+00:00
+#DEBUG: Time Zone     -> Etc/UTC
+#DEBUG: Data Contact   -> daryl herzmann akrherz@iastate.edu 515-294-5978
+#DEBUG: Entries Found -> -1
+station,valid,lon,lat,tmpf, dwpf, relh, drct, sknt, p01i, alti, mslp, vsby, gust, skyc1, skyc2, skyc3, skyc4, skyl1, skyl2, skyl3, skyl4, presentwx, metar
+YBBN,2011-07-05 02:45,153.1292,-27.3917,69.80,33.80,26.43,260.00,16.00,M,29.94,M,6.21,26.00,M,M,M,M,M,M,M,M,M,YBBN 050245Z 26016G26KT CAVOK 21/01 Q1014 RMK WIND GUST INCREASE FM0245 MOD TURB BLW 5000FT
+YBBN,2011-07-05 04:34,153.1292,-27.3917,71.60,28.40,19.98,260.00,21.00,M,29.91,M,6.21,31.00,M,M,M,M,M,M,M,M,M,YBBN 050434Z 26021G31KT CAVOK 22/M02 Q1013 RMK WIND GUST INCREASE FM0434 MOD TURB BLW 5000FT

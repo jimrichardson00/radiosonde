@@ -1,0 +1,2 @@
+"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
+"1","YBBN","2015-03-15 00:00",153.1292,-27.3917,78.8,59,50.69,240,9,0,29.8,"M",6.21,"M","M","M","M","M","M","M","M","M","M","YBBN 150000Z 24009KT CAVOK 26/15 Q1009 NOSIG"

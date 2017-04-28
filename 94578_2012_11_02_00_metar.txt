@@ -1,0 +1,2 @@
+"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
+"1","YBBN","2012-11-02 00:00",153.1292,-27.3917,78.8,60.8,54.05,110,15,0,29.8,"M",6.21,"M","FEW","M","M","M","3600.00","M","M","M","M","YBBN 020000Z 11015KT 9999 FEW036 26/16 Q1009 FM0000 14018KT 9999 SCT030 BKN045 FM0000 MOD TURB BLW 5000FT"

@@ -1,0 +1,2 @@
+"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
+"1","YBBN","2014-01-04 00:00",153.1292,-27.3917,89.6,73.4,59.01,10,19,0,29.56,"M",6.21,"M","M","M","M","M","M","M","M","M","M","YBBN 040000Z 01019KT CAVOK 32/23 Q1001 FM0000 01018G28KT CAVOK FM0000 MOD TURB BLW 5000FT"

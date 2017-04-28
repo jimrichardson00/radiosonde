@@ -1,0 +1,2 @@
+"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
+"1","YBBN","2013-03-31 00:00",153.1292,-27.3917,77,66.2,69.33,360,7,0,29.94,"M",6.21,"M","FEW","SCT","M","M","3500.00","8000.00","M","M","M","YBBN 310000Z 36007KT 9999 FEW035 SCT080 25/19 Q1014 INTER 0230/0300 3000 SHRA BKN030"

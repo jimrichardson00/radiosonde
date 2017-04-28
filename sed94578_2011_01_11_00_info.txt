@@ -1,0 +1,17 @@
+Stationidentifier,YBBN
+Stationnumber,94578
+Observationtime,110111/0000
+Stationlatitude,-27.38
+Stationlongitude,153.13
+Stationelevation,5.0
+ConvectiveAvailablePotentialEnergy,290.04
+CAPEusingvirtualtemperature,323.22
+ConvectiveInhibition,-0.09
+CINSusingvirtualtemperature,-0.01
+LevelofFreeConvection,947.00
+LFCTusingvirtualtemperature,950.01
+Temp[K]oftheLiftedCondensationLevel,294.58
+Pres[hPa]oftheLiftedCondensationLevel,957.75
+Meanmixedlayerpotentialtemperature,298.25
+Meanmixedlayermixingratio,17.12
+Precipitablewater[mm]forentiresounding,58.33

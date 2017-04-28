@@ -1,0 +1,2 @@
+"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
+"1","YBBN","2014-08-18 00:00",153.1292,-27.3917,62.6,41,45.04,240,25,0,29.85,"M",6.21,"37.00","SCT","M","M","M","4400.00","M","M","M","M","YBBN 180000Z 24025G37KT 9999 SCT044 17/05 Q1011"
