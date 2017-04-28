@@ -1,7 +1,0 @@
-#DEBUG: Format Typ    -> comma
-#DEBUG: Time Period   -> 2011-04-08 00:00:00+00:00 2011-04-09 00:00:00+00:00
-#DEBUG: Time Zone     -> Etc/UTC
-#DEBUG: Data Contact   -> daryl herzmann akrherz@iastate.edu 515-294-5978
-#DEBUG: Entries Found -> -1
-station,valid,lon,lat,tmpf, dwpf, relh, drct, sknt, p01i, alti, mslp, vsby, gust, skyc1, skyc2, skyc3, skyc4, skyl1, skyl2, skyl3, skyl4, presentwx, metar
-YBBN,2011-04-08 07:00,153.1292,-27.3917,69.80,62.60,77.90,170.00,8.00,M,30.21,M,6.21,M,FEW,BKN,M,M,2500.00,9500.00,M,M,M,YBBN 080700Z 17008KT 9999 FEW025 BKN095 21/17 Q1023 RMK CB TOP TO THE NORTH INTER 0700/1000 3000 SHRA BKN012

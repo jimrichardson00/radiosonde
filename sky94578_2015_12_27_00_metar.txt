@@ -1,2 +1,0 @@
-"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
-"1","YBBN","2015-12-27 00:00",153.1292,-27.3917,80.6,69.8,69.71,350,8,0,29.88,"M",6.21,"M","FEW","SCT","OVC","M","2500.00","11000.00","17000.00","M","M","YBBN 270000Z 35008KT 9999 FEW025 SCT110 OVC170 27/21 Q1012"

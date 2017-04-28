@@ -1,2 +1,0 @@
-"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
-"1","YBBN","2015-08-25 00:00",153.1292,-27.3917,75.2,60.8,60.9,340,12,0,30.09,"M",6.21,"M","FEW","M","M","M","3000.00","M","M","M","M","YBBN 250000Z 34012KT 9999 FEW030 24/16 Q1019 NOSIG"

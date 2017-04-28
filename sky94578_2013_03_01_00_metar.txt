@@ -1,2 +1,0 @@
-"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
-"1","YBBN","2013-03-01 00:00",153.1292,-27.3917,77,69.8,78.48,320,5,0,29.83,"M",6.21,"M","FEW","BKN","OVC","M",900,14000,"20000.00","M","-RA","YBBN 010000Z 32005KT 9999 -RA FEW009 BKN140 OVC200 25/21 Q1010 RMK HZ"

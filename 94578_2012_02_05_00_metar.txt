@@ -1,2 +1,0 @@
-"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
-"1","YBBN","2012-02-05 00:00",153.1292,-27.3917,77,66.2,69.33,10,5,0,29.62,"M",6.21,"M","SCT","SCT","M","M","2800.00","4000.00","M","M","M","YBBN 050000Z 01005KT 9999 SCT028 SCT040 25/19 Q1003 NOSIG"

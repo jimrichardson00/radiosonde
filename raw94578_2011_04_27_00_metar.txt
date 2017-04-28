@@ -1,8 +1,0 @@
-#DEBUG: Format Typ    -> comma
-#DEBUG: Time Period   -> 2011-04-27 00:00:00+00:00 2011-04-28 00:00:00+00:00
-#DEBUG: Time Zone     -> Etc/UTC
-#DEBUG: Data Contact   -> daryl herzmann akrherz@iastate.edu 515-294-5978
-#DEBUG: Entries Found -> -1
-station,valid,lon,lat,tmpf, dwpf, relh, drct, sknt, p01i, alti, mslp, vsby, gust, skyc1, skyc2, skyc3, skyc4, skyl1, skyl2, skyl3, skyl4, presentwx, metar
-YBBN,2011-04-27 03:07,153.1292,-27.3917,66.20,60.80,82.74,160.00,16.00,M,30.12,M,6.21,M,M,M,M,M,M,M,M,M,// //////,YBBN 270307Z 16016KT //// // ////// 19/16 Q1020 RMK VIS:6000 FM0315 13014KT 9999 -SHRA SCT025 BKN050 INTER 0307/0607 3000 SHRA BKN015
-YBBN,2011-04-27 05:30,153.1292,-27.3917,68.00,59.00,72.92,170.00,8.00,M,30.09,M,6.21,M,FEW,BKN,BKN,M,2800.00,8000.00,30000.00,M,M,YBBN 270530Z 17008KT 9999 FEW028 BKN080 BKN300 20/15 Q1019 RMK WIND VELOCITY ESTIMATED INTER 0530/0830 3000 SHRA BKN015

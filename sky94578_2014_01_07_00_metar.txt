@@ -1,2 +1,0 @@
-"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
-"1","YBBN","2014-01-07 00:00",153.1292,-27.3917,82.4,57.2,42.25,130,15,0,29.91,"M",6.21,"25.00","M","M","M","M","M","M","M","M","M","YBBN 070000Z 13015G25KT CAVOK 28/14 Q1013"

@@ -1,2 +1,0 @@
-"","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4"
-"1","FEW","BKN","FEW","M","300.00","8500.00","4500.00","M"

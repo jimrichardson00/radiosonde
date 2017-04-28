@@ -1,2 +1,0 @@
-"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
-"1","YBBN","2013-10-29 00:00",153.1292,-27.3917,78.8,66.2,65.33,10,18,0,29.94,"M",6.21,"M","FEW","M","M","M","2400.00","M","M","M","M","YBBN 290000Z 01018KT 9999 FEW024 26/19 Q1014 TEMPO 0230/0300 VRB20G40KT 2000 TSRAGR BKN010 SCT040CB"

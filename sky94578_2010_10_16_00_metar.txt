@@ -1,2 +1,0 @@
-"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
-"1","YBBN","2010-10-16 00:00",153.1292,-27.3917,64.4,39.2,39.43,270,23,"M",29.77,"M",6.21,"M","FEW","M","M","M","3000.00","M","M","M","M","YBBN 160000Z 27023KT 9999 FEW030 18/04 Q1008 WS RWY19 RMK MOD O/SHOOT WIND SHEAR AT 200FT AND MOD U/SHOOT WIND SHEAR AT 100FT FM0000 26020G33KT 9999 FEW030 FM0000 MOD TURB BLW 5000FT"

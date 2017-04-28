@@ -1,2 +1,0 @@
-"","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4"
-"1","SCT","SCT","M","M",2500,10000,"M","M"

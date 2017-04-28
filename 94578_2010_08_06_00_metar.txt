@@ -1,2 +1,0 @@
-"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
-"1","YBBN","2010-08-06 00:00",153.1292,-27.3917,66.2,39.2,37.03,220,14,"M",30.06,"M",6.21,"M","M","M","M","M","M","M","M","M","M","YBBN 060000Z 22014KT CAVOK 19/04 Q1018 NOSIG"

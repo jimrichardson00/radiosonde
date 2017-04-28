@@ -1,2 +1,0 @@
-"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
-"1","YBBN","2010-03-22 00:00",153.1292,-27.3917,78.8,69.8,73.95,200,2,"M",30.06,"M",5.59,"M","SCT","OVC","M","M","2000.00","26000.00","M","M","M","YBBN 220000Z 20002KT 9000 SCT020 OVC260 26/21 Q1018 RMK HAZE NOSIG"

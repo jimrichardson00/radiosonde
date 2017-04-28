@@ -1,2 +1,0 @@
-"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
-"1","YBBN","2010-08-09 00:00",153.1292,-27.3917,66.2,51.8,59.74,120,5,"M",30.21,"M",6.21,"M","FEW","SCT","BKN","M","3000.00","5700.00","7600.00","M","M","YBBN 090000Z 12005KT 9999 FEW030 SCT057 BKN076 19/11 Q1023 RMK SH TO NE/SMOKE/HAZE NOSIG"

@@ -1,2 +1,0 @@
-"","station","valid","lon","lat","tmpf","dwpf","relh","drct","sknt","p01i","alti","mslp","vsby","gust","skyc1","skyc2","skyc3","skyc4","skyl1","skyl2","skyl3","skyl4","presentwx","metar"
-"1","YBBN","2015-05-02 00:00",153.1292,-27.3917,68,59,72.92,270,8,0,29.88,"M",6.21,"M","FEW","M","M","M","1500.00","M","M","M","M","YBBN 020000Z 27008KT 9999 FEW015 20/15 Q1012"

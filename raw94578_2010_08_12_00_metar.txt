@@ -1,8 +1,0 @@
-#DEBUG: Format Typ    -> comma
-#DEBUG: Time Period   -> 2010-08-12 00:00:00+00:00 2010-08-13 00:00:00+00:00
-#DEBUG: Time Zone     -> Etc/UTC
-#DEBUG: Data Contact   -> daryl herzmann akrherz@iastate.edu 515-294-5978
-#DEBUG: Entries Found -> -1
-station,valid,lon,lat,tmpf, dwpf, relh, drct, sknt, p01i, alti, mslp, vsby, gust, skyc1, skyc2, skyc3, skyc4, skyl1, skyl2, skyl3, skyl4, presentwx, metar
-YBBN,2010-08-12 03:16,153.1292,-27.3917,66.20,33.80,29.92,280.00,21.00,M,29.77,M,6.21,32.00,M,M,M,M,M,M,M,M,// //////,YBBN 120316Z 28021G32KT //// // ////// 19/01 Q1008 RMK CLD:CLR BLW 125 VIS:9999 FM0316 MOD/SEV TURB BLW 5000FT
-YBBN,2010-08-12 09:55,153.1292,-27.3917,57.20,37.40,47.44,250.00,16.00,M,29.88,M,6.21,28.00,M,M,M,M,M,M,M,M,// //////,YBBN 120955Z 25016G28KT //// // ////// 14/03 Q1012 RMK CLD/CLR BLW 125 VIS/9999 FM0955 MOD/SEV TURB BLW 5000FT
