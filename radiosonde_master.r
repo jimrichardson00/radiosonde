@@ -49,7 +49,8 @@ for(year in seq(2010, 2016, 1)) {
         TO = paste(DAY, HOUR, sep = "")
         STNM = "94578"
         STATION = "YBBN"
-        filename = paste(STNM, "_", YEAR, "_", MONTH, "_", DAY, "_", HOUR, sep = "")
+        # filename = paste(STNM, "_", YEAR, "_", MONTH, "_", DAY, "_", HOUR, sep = "")
+        filename = paste("\\data\\", STNM, "_", YEAR, "_", MONTH, "_", DAY, "_", HOUR, sep = "")
 
         # print(filename)
 
