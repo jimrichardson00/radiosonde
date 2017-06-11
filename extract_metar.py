@@ -27,5 +27,5 @@ def extract_metar( region, YEAR, MONTH, DAY, HOUR, FROM, TO, STNM, STATION, file
   body = soup.find_all("body")
   # print body
 
-  file = open("raw" + str(filename) + "_metar.txt", "w")
+  file = open("data/" + STATION + "/raw" + str(filename) + "_metar.txt", "w")
   file.write(body[0].find(text = True)) 

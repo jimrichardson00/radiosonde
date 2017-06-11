@@ -32,5 +32,5 @@ def extract_data( region, YEAR, MONTH, DAY, HOUR, FROM, TO, STNM, STATION, filen
     print url
 
   if h2 != []:
-    file = open("raw" + str(filename) + "_data.txt", "w")
+    file = open("data/" + STATION + "/raw" + str(filename) + "_data.txt", "w")
     file.write(pre[0].find(text = True)) 

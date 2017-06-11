@@ -13,19 +13,23 @@
 
 extract_data <- function(region, YEAR, MONTH, DAY, HOUR, FROM, TO, STNM, STATION, filename) {
 
+  setwd(data_dir)
   paste("raw", filename, "_info.txt", sep = "")
   file.exists(paste("raw", filename, "_info.txt", sep = "")) == FALSE
   if(file.exists(paste("raw", filename, "_info.txt", sep = "")) == FALSE) {
 
     require(rPython)
-    python.load("extract_info.py")
-    python.call("extract_info", region, YEAR, MONTH, DAY, HOUR, FROM, TO, STNM, STATION, filename)
+    setwd(master_dir)
+    python.load("extract_data.py")
+    python.call("extract_data", region, YEAR, MONTH, DAY, HOUR, FROM, TO, STNM, STATION, filename)
 
   }
 
+  setwd(data_dir)
   file.exists(paste("raw", filename, "_data.txt", sep = "")) == TRUE
   if(file.exists(paste("raw", filename, "_data.txt", sep = "")) == TRUE) {
 
+    setwd(data_dir)
     file.exists(paste("sed", filename, "_data.txt", sep = "")) == FALSE
     if(file.exists(paste("sed", filename, "_data.txt", sep = "")) == FALSE) {
 
@@ -71,16 +75,19 @@ extract_data <- function(region, YEAR, MONTH, DAY, HOUR, FROM, TO, STNM, STATION
 
 extract_info <- function(region, YEAR, MONTH, DAY, HOUR, FROM, TO, STNM, filename) {
 
+  setwd(data_dir)
   paste("raw", filename, "_info.txt", sep = "")
   file.exists(paste("raw", filename, "_info.txt", sep = "")) == FALSE
   if(file.exists(paste("raw", filename, "_info.txt", sep = "")) == FALSE) {
 
     require(rPython)
+    setwd(master_dir)
     python.load("extract_info.py")
     python.call("extract_info", region, YEAR, MONTH, DAY, HOUR, FROM, TO, STNM, STATION, filename)
 
   }
 
+  setwd(data_dir)
   file.exists(paste("raw", filename, "_info.txt", sep = ""))
   if(file.exists(paste("raw", filename, "_info.txt", sep = ""))) {
 
@@ -104,6 +111,7 @@ extract_info <- function(region, YEAR, MONTH, DAY, HOUR, FROM, TO, STNM, filenam
     info[1, ] <- as.vector(data[, 2])
     names(info) <- as.vector(as.character(data[, 1]))
 
+    setwd(data_dir)
     write.csv(x = info, file = paste(filename, "_info.txt", sep = ""))      
     save(x = info, file = paste(filename, "_info.RData", sep = ""))
 
@@ -128,16 +136,19 @@ TS_f <- function(metar) {
 
 extract_metar_sky <- function(region, YEAR, MONTH, DAY, HOUR, FROM, TO, STNM, STATION, filename) {
 
+  setwd(data_dir)
   paste("raw", filename, "_metar.txt", sep = "")
   file.exists(paste("raw", filename, "_metar.txt", sep = "")) == FALSE
   if(file.exists(paste("raw", filename, "_metar.txt", sep = "")) == FALSE) {
 
     require(rPython)
+    setwd(master_dir)
     python.load("extract_metar.py")
     python.call("extract_metar", region, YEAR, MONTH, DAY, HOUR, FROM, TO, STNM, STATION, filename)
 
   }
 
+  setwd(data_dir)
   paste("sky", filename, "_metar.txt", sep = "")
   file.exists(paste("sky", filename, "_metar.txt", sep = "")) == FALSE
   if(file.exists(paste("sky", filename, "_metar.txt", sep = "")) == FALSE) {
@@ -160,16 +171,19 @@ extract_metar_sky <- function(region, YEAR, MONTH, DAY, HOUR, FROM, TO, STNM, ST
 
 extract_metar_TS <- function(region, YEAR, MONTH, DAY, HOUR, FROM, TO, STNM, STATION, filename) {
 
+  setwd(data_dir)
   paste("raw", filename, "_metar.txt", sep = "")
   file.exists(paste("raw", filename, "_metar.txt", sep = "")) == FALSE
   if(file.exists(paste("raw", filename, "_metar.txt", sep = "")) == FALSE) {
 
     require(rPython)
+    setwd(master_dir)
     python.load("extract_metar.py")
     python.call("extract_metar", region, YEAR, MONTH, DAY, HOUR, FROM, TO, STNM, STATION, filename)
 
   }
 
+  setwd(data_dir)
   paste(filename, "_metar.txt", sep = "")
   file.exists(paste(filename, "_metar.txt", sep = "")) == FALSE
   if(file.exists(paste(filename, "_metar.txt", sep = "")) == FALSE) {
@@ -187,6 +201,5 @@ extract_metar_TS <- function(region, YEAR, MONTH, DAY, HOUR, FROM, TO, STNM, STA
     return(NA)
   
   }
-
 
 }

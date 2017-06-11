@@ -31,5 +31,5 @@ def extract_info( region, YEAR, MONTH, DAY, HOUR, FROM, TO, STNM, STATION, filen
   # print h2 != []
 
   if h2 != []:
-    file = open("raw" + str(filename) + "_info.txt", "w")
+    file = open("data/" + STATION + "/raw" + str(filename) + "_info.txt", "w")
     file.write(pre[1].find(text = True)) 

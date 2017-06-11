@@ -1,8 +1,11 @@
-# radiosonde_master.r
+# cloud_amount_master.r
 
-setwd("/home/jim/Dropbox/Python/radiosonde")
+master_dir = "/home/jim/Dropbox/Python/cloud_amount"
+data_dir = "/home/jim/Dropbox/Python/cloud_amount/data"
 
-source("radiosonde_functions.r")
+setwd(master_dir)
+
+source("cloud_amount_functions.r")
 
 region = "pac"
 YEAR = "2016"
@@ -30,7 +33,7 @@ BKN <- vector()
 OVC <- vector()
 
 # for(year in seq(2010, 2010, 1)) {
-for(year in seq(2010, 2016, 1)) {
+for(year in seq(2000, 2016, 1)) {
 
   for(month in seq(1, 12, 1)) {
 
@@ -49,8 +52,8 @@ for(year in seq(2010, 2016, 1)) {
         TO = paste(DAY, HOUR, sep = "")
         STNM = "94578"
         STATION = "YBBN"
-        # filename = paste(STNM, "_", YEAR, "_", MONTH, "_", DAY, "_", HOUR, sep = "")
-        filename = paste("\\data\\", STNM, "_", YEAR, "_", MONTH, "_", DAY, "_", HOUR, sep = "")
+        filename = paste(STNM, "_", YEAR, "_", MONTH, "_", DAY, "_", HOUR, sep = "")
+        # filename = paste("\\data\\", STNM, "_", YEAR, "_", MONTH, "_", DAY, "_", HOUR, sep = "")
 
         # print(filename)
 
@@ -59,13 +62,18 @@ for(year in seq(2010, 2016, 1)) {
         {
 
           paste("sed", filename, "_data.txt", sep = "")
+
+          setwd(data_dir)
           file.exists(paste("sed", filename, "_data.txt", sep = "")) == FALSE
-          if(file.exists(paste(filename, "_data.txt", sep = "")) == FALSE) {
+          if(file.exists(paste("", filename, "_data.txt", sep = "")) == FALSE) {
             extract_data(region = region, YEAR = YEAR, MONTH = MONTH, DAY = DAY, HOUR = HOUR, FROM = FROM, TO = TO, STNM = STNM, STATION = STATION, filename = filename)
           }
+          setwd(master_dir)
 
           data <- NA
+          setwd(data_dir)
           data <- read.csv(paste("sed", filename, "_data.txt", sep = ""))
+          setwd(master_dir)
           data <- na.omit(data)
           head(data)
 
@@ -73,8 +81,8 @@ for(year in seq(2010, 2016, 1)) {
           data$HGHTft <- data$HGHT*3.28084
           data <- na.omit(data)
 
-          # restrict to less than 5000ft
-          data <- data[data$HGHTft <= 5000, ]
+          # restrict to less than 10000ft
+          data <- data[data$HGHTft <= 10000, ]
           data
 
           interp <- NA
@@ -97,8 +105,9 @@ for(year in seq(2010, 2016, 1)) {
           sky = NA
           sky = data.frame(skyc = c(as.character(metar$skyc1), as.character(metar$skyc2), as.character(metar$skyc3), as.character(metar$skyc4)),
             skyl = c(as.numeric(as.character(metar$skyl1)), as.numeric(as.character(metar$skyl2)), as.numeric(as.character(metar$skyl3)), as.numeric(as.character(metar$skyl4))))
-          nrow(sky)
-          sky
+
+          diff = seq(-420, 2100 - 420, length = 21)
+          diff
 
           if(nrow(sky) == 4) {
 
@@ -117,7 +126,7 @@ for(year in seq(2010, 2016, 1)) {
                   # x = as.numeric(sky[i, 2]) + seq(-500, 500, 50)
                   # FEW <- c(FEW, predict(object = smth, x = x)$y)
 
-                  x = as.numeric(sky[i, 2]) + seq(0, 1000, 21)
+                  x = as.numeric(sky[i, 2]) + diff
                   FEW <- c(FEW, interp(x))
 
                   } else if (sky[i, 1] == "SCT") {
@@ -128,7 +137,7 @@ for(year in seq(2010, 2016, 1)) {
                     # x = as.numeric(sky[i, 2]) + seq(0, 1000, length = 21)
                     # SCT <- c(SCT, predict(object = smth, x = x)$y)
 
-                    x = as.numeric(sky[i, 2]) + seq(0, 1000, length = 21)
+                    x = as.numeric(sky[i, 2]) + diff
                     SCT <- c(SCT, interp(x))
 
                     } else if (sky[i, 1] == "BKN") {
@@ -139,7 +148,7 @@ for(year in seq(2010, 2016, 1)) {
                       # x = as.numeric(sky[i, 2]) + seq(0, 1000, length = 21)
                       # BKN <- c(BKN, predict(object = smth, x = x)$y)
 
-                      x = as.numeric(sky[i, 2]) + seq(0, 1000, length = 21)
+                      x = as.numeric(sky[i, 2]) + diff
                       BKN <- c(BKN, interp(x))
 
                       # if(predict(object = smth, x = sky[i, 2])$y > 20) {
@@ -160,7 +169,7 @@ for(year in seq(2010, 2016, 1)) {
                         # x = as.numeric(sky[i, 2]) + seq(0, 1000, length = 21)
                         # OVC <- c(OVC, predict(object = smth, x = x)$y)
 
-                        x = as.numeric(sky[i, 2]) + seq(0, 1000, length = 21)
+                        x = as.numeric(sky[i, 2]) + diff
                         OVC <- c(OVC, interp(x))
 
                       }
@@ -177,7 +186,6 @@ for(year in seq(2010, 2016, 1)) {
 
           # }
 
-
         }
         ,
         
@@ -190,7 +198,7 @@ for(year in seq(2010, 2016, 1)) {
   }
 }
 
-length(seq(-500, 500, 50))
+# ----------------------------------
 
 FEWm <- matrix(FEW, ncol = 21, byrow = TRUE)
 FEWm <- as.data.frame(FEWm)
@@ -213,18 +221,65 @@ OVC <- na.omit(OVC)
 data_train <- rbind(FEWm, SCTm, BKNm, OVCm)
 data_train <- na.omit(data_train)
 class(data_train$Cover)
+head(data_train)
 
 formula <- as.formula(paste("factor(Cover) ~ ", paste(paste("V", seq(1, 21, 1), sep = ""), collapse = " + "), sep = ""))
 formula
 
-?randomForest
+# ?randomForest
 rndf <- randomForest(formula, data = data_train)
 rndf
 
-plot(data$HGHTft, data$DEWDEP, type = "l")
-points(x, predict(object = smth, x = x)$y)
-predict(object = smth, x = x)
+train <- sample(seq(1, nrow(data_train), 1), size = ceiling(nrow(data_train)*(9/10)))
+data_tra <- data_train[train, ]
+data_tes <- data_train[-train, ]
 
+# ?randomForest
+rndf <- randomForest(factor(Cover) ~ V5, data = data_tra)
+rndf
+
+output <- as.character(predict(object = rndf, newdata = data_tes))
+output
+
+data_tes$output <- output
+
+output == "FEW"
+
+output <- data.frame(cbind(output[, c("FEW", "SCT", "BKN", "OVC")], data_tes$Cover, data_tes$V5))
+head(output)
+
+write.csv(output, "ouput.csv")
+
+png("/home/jim/Dropbox/Python/cloud_amount/2.png")
+plot(density(data_tes[output == "BKN", ]$V5), col = "red", ylim = c(0, 0.5))
+lines(density(data_tes[output == "SCT", ]$V5), col = "blue", ylim = c(0, 0.5))
+lines(density(data_tes[output == "FEW", ]$V5), col = "green", ylim = c(0, 0.5))
+dev.off()
+
+
+lm <- lm() ~ V5, data = data_tra)
+
+predict(object = lm, newdata = data_tes)
+
+tapply(data_tes$V5, data_tes$output, summary)
+
+
+
+
+rndf$result
+
+
+importance(rndf, type = 1)
+
+weights = 1680 - abs(diff)
+weights = weights/sum(weights)
+weights
+sum(weights)
+
+DEWDEP = weights[1]*data_train[, "V1"] + weights[2]*data_train[, "V2"] + weights[3]*data_train[, "V3"] + weights[4]*data_train[, "V4"] + weights[5]*data_train[, "V5"] + weights[6]*data_train[, "V6"] + weights[7]*data_train[, "V7"] + weights[8]*data_train[, "V8"] + weights[9]*data_train[, "V9"] + weights[10]*data_train[, "V10"] + weights[11]*data_train[, "V11"] + weights[12]*data_train[, "V12"] + weights[13]*data_train[, "V13"] + weights[14]*data_train[, "V14"] + weights[15]*data_train[, "V15"] + weights[16]*data_train[, "V16"] + weights[17]*data_train[, "V17"] + weights[18]*data_train[, "V18"] + weights[19]*data_train[, "V19"] + weights[20]*data_train[, "V20"] + weights[21]*data_train[, "V21"]
+data_train$DEWDEP <- DEWDEP
+
+index = which(diff == 0)
 
 plot(hist(FEW))
 plot(hist(SCT))
@@ -236,18 +291,21 @@ print(length(SCT))
 print(length(BKN))
 print(length(OVC))
 
-plot(density(FEW), col = "black", type = "l", ylim = c(0, 0.5))
-lines(density(SCT), col = "blue", ylim = c(0, 0.5))
-lines(density(BKN), col = "red", ylim = c(0, 0.5))
-lines(density(OVC), col = "green", ylim = c(0, 0.5))
+png("/home/jim/Dropbox/Python/cloud_amount/1.png")
+plot(density(data_train[data_train$Cover == "OVC", ]$DEWDEP), col = "black", type = "l", ylim = c(0, 0.6), xlim = c(0, 20))
+lines(density(data_train[data_train$Cover == "BKN", ]$DEWDEP), col = "red", ylim = c(0, 0.5))
+lines(density(data_train[data_train$Cover == "SCT", ]$DEWDEP), col = "blue", ylim = c(0, 0.5))
+lines(density(data_train[data_train$Cover == "FEW", ]$DEWDEP), col = "green", ylim = c(0, 0.5))
+dev.off()
 
-data_train = data.frame(DEWDEP = c(FEW, SCT, BKN, OVC), 
-  Cover = c(rep("FEW", length(FEW)), rep("SCT", length(SCT)), rep("BKN", length(BKN)), rep("OVC", length(OVC))))
+png("/home/jim/Dropbox/Python/cloud_amount/2.png")
+plot(density(data_train[data_train$Cover == "OVC", ]$V5), col = "black", type = "l", ylim = c(0, 0.6), xlim = c(0,20))
+lines(density(data_train[data_train$Cover == "BKN", ]$V5), col = "red", ylim = c(0, 0.5))
+lines(density(data_train[data_train$Cover == "SCT", ]$V5), col = "blue", ylim = c(0, 0.5))
+lines(density(data_train[data_train$Cover == "FEW", ]$V5), col = "green", ylim = c(0, 0.5))
+dev.off()
 
-require(randomForest)
-rndf <- randomForest(formula = Cover ~ DEWDEP, data = data_train)
-rndf
-
+tapply(data_train$V5, data_train$Cover, summary)
 
 # require(fitdistrplus)
 # require(logspline)
@@ -297,9 +355,9 @@ rndf
 
 # # ts at ybbn
 
-# setwd("/home/jim/Dropbox/Python/radiosonde")
+# setwd("/home/jim/Dropbox/Python/cloud_amount")
 
-# source("radiosonde_functions.r")
+# source("cloud_amount_functions.r")
 
 # # region = "pac"
 # # YEAR = "2016"
