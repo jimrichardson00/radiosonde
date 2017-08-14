@@ -1,5 +1,86 @@
 # radiosonde.r
 
+
+relhum <- function(datetime_loc, cldgrpn) {
+
+  index_upp <- which(upperair$datetime_loc == datetime_loc)
+  index_upp
+
+  index_met <- which(metar$datetime_loc == datetime_loc)
+  index_met
+
+  col <- which(names(metar) == paste("cldhgt", cldgrpn, sep = ""))
+  col
+
+  metar[index_met[1], ]
+  cldhgt_cldgrpn <- metar[index_met[1], col, with = FALSE]
+  cldhgt_cldgrpn <- as.numeric(cldhgt_cldgrpn)
+  head(cldhgt_cldgrpn)
+
+  is.na(cldhgt_cldgrpn)
+  if(is.na(cldhgt_cldgrpn)) {
+
+    return(NA)
+
+  } else {
+
+      geopgpf <- upperair[index_upp, "geopgpf"]
+      geopgpf <- as.numeric(as.vector(geopgpf$geopgpf))
+      head(geopgpf)
+
+      min(na.omit(geopgpf)) > cldhgt_cldgrpn | max(na.omit(geopgpf)) < cldhgt_cldgrpn
+      if(min(na.omit(geopgpf)) > cldhgt_cldgrpn | max(na.omit(geopgpf)) < cldhgt_cldgrpn) {
+
+        return(NA)
+
+      } else {
+
+        upperair[index_upp, ]
+        relhumi <- upperair[index_upp, "relhumi"]
+        relhumi <- as.numeric(as.vector(relhumi$relhumi))
+        head(relhumi)
+
+        head(cldhgt_cldgrpn - geopgpf)
+        min(abs(cldhgt_cldgrpn - geopgpf))
+        index_min <- which.min(abs(cldhgt_cldgrpn - geopgpf))
+        index_min
+
+        (cldhgt_cldgrpn - geopgpf)[index_min]
+        (cldhgt_cldgrpn - geopgpf)[index_min] > 0
+        if((cldhgt_cldgrpn - geopgpf)[index_min] > 0) {
+
+          geopgpf1 <- geopgpf[index_min]
+          geopgpf2 <- geopgpf[index_min + 1]
+
+          relhumi1 <- relhumi[index_min]
+          relhumi2 <- relhumi[index_min + 1]
+
+        } else {
+
+          geopgpf1 <- geopgpf[index_min - 1]
+          geopgpf1
+
+          geopgpf2 <- geopgpf[index_min]
+          geopgpf2
+
+          relhumi1 <- relhumi[index_min - 1]
+          relhumi2 <- relhumi[index_min]
+
+      }  
+
+    }
+
+
+  ((relhumi2 - relhumi1)/(geopgpf2 - geopgpf1))*(cldhgt_cldgrpn - geopgpf1) + relhumi1
+  return(((relhumi2 - relhumi1)/(geopgpf2 - geopgpf1))*(cldhgt_cldgrpn - geopgpf1) + relhumi1)
+
+  }
+
+}
+
+
+# ----------------------
+
 # region = "pac"
 # YEAR = "2016"
 # MONTH = "01"
